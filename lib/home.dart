@@ -4,8 +4,11 @@ import 'detail.dart';
 import 'models/food_item.dart';
 
 class HomePage extends StatelessWidget {
-  final String nama;
-  const HomePage({super.key, required this.nama});
+  // Tambahkan variabel onRefresh di sini
+  final VoidCallback onRefresh;
+  
+  // Masukkan onRefresh ke dalam konstruktor
+  const HomePage({super.key, required this.onRefresh});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +31,8 @@ class HomePage extends StatelessWidget {
                     builder: (context) => DetailPage(foodItem: item),
                   ),
                 );
-                onRefresh(); // Refresh state ketika kembali dari halaman detail
+                // onRefresh sekarang sudah dikenali
+                onRefresh(); 
               },
               child: Padding(
                 padding: const EdgeInsets.all(8.0),

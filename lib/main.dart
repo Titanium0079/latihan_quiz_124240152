@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
+import 'screens/main_screen.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const RestoApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class RestoApp extends StatelessWidget {
+  const RestoApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(body: Center(child: Text('Hello World!'))),
+    return MaterialApp(
+      title: 'Kuis Praktikum Mobile',
+      theme: ThemeData(
+        primarySwatch: Colors.orange,
+        scaffoldBackgroundColor: Colors.grey[100],
+      ),
+      home: const MainScreen(),
     );
   }
 }
