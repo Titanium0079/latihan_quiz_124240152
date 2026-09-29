@@ -1,4 +1,3 @@
-// lib/screens/detail_page.dart
 import 'package:flutter/material.dart';
 
 import '../models/food_item.dart';
@@ -13,11 +12,13 @@ class DetailPage extends StatefulWidget {
 }
 
 class _DetailPageState extends State<DetailPage> {
+  // Controller untuk membaca dan mengontrol isi teks dari TextField porsi
   late TextEditingController _portionController;
 
   @override
   void initState() {
     super.initState();
+    // Mengisi input awal dengan jumlah porsi saat ini
     _portionController = TextEditingController(
       text: widget.foodItem.quantity.toString(),
     );
@@ -94,6 +95,7 @@ class _DetailPageState extends State<DetailPage> {
           ],
         ),
       ),
+      // BottomNavigatorBar diisi tombol aksi di layar bagian bawah
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ElevatedButton(
@@ -102,14 +104,20 @@ class _DetailPageState extends State<DetailPage> {
             padding: const EdgeInsets.symmetric(vertical: 16),
           ),
           onPressed: () {
+            // Konversi teks dari input ke angka integer
             int newQuantity = int.tryParse(_portionController.text) ?? 0;
+
+            // Validasi: Jika angka minus, paksa angka ke 0
             if (newQuantity < 0) newQuantity = 0;
 
+            // Mengubah nilai quantity pada objek model
             widget.foodItem.quantity = newQuantity;
+
+            // Navigator.pop: Menutup Halaman Detail dan kembali ke Halaman Utama
             Navigator.pop(context);
           },
           child: const Text(
-            'SIMPAN PESANAN',
+            'Simpan Pesanan',
             style: TextStyle(fontSize: 16, color: Colors.white),
           ),
         ),
