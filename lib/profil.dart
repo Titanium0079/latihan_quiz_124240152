@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// Profil bersifat statis 
 class ProfilePage extends StatelessWidget{
   const ProfilePage({super.key});
 

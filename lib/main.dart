@@ -15,9 +15,10 @@ class RestoApp extends StatelessWidget {
       title: 'Latihan Kuis Resto 124240152',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.orange,
-        scaffoldBackgroundColor: Colors.grey[100],
+        primarySwatch: Colors.orange, // Warna utama aplikasi 
+        scaffoldBackgroundColor: Colors.grey[100], // Warna dasar latar belakang seluruh layar
       ),
+      // Menentukan layar pertama yang akan dibuka saat aplikasi dinyalakan
       home: const MainScreen(),
     );
   }
