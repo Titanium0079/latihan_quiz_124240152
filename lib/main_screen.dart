@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'home.dart';
-import 'profil.dart'; // Sudah disesuaikan dengan nama file profil.dart
+import 'profil.dart'; 
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
