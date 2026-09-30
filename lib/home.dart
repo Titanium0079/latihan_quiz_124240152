@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'detail.dart';
 import 'models/food_item.dart';
 

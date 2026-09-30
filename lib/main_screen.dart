@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'home.dart';
-import 'profile.dart';
+import 'profil.dart'; // Sudah disesuaikan dengan nama file profil.dart
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -22,7 +22,8 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     final List<Widget> pages = [
-      Home(
+      HomePage(
+        // Menggunakan HomePage (bukan Home)
         onRefresh: () {
           setState(() {});
         },
