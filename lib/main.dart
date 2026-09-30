@@ -12,7 +12,8 @@ class RestoApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Kuis Praktikum Mobile',
+      title: 'Latihan Kuis Resto 124240152',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.orange,
         scaffoldBackgroundColor: Colors.grey[100],
